@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/include/osmium/",
+                "/Users/faisalshahin/Documents/CU_Boulder/CSPB_Data_Structures/Navigation_Project/libosmium/include",
+                "/opt/homebrew/include",
+                "/Users/faisalshahin/Documents/CU_Boulder/CSPB_Data_Structures/Navigation_Project/libosmium/include",
+                "/usr/local/include"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "macos-clang-x64"
+        }
+    ],
+    "version": 4
+}
