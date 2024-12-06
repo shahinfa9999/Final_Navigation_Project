@@ -51,19 +51,37 @@ int main() {
 
     // Find the shortest path
     std::vector<long long> shortestPath = graph.findShortestPath(startNode, endNode);
+    double shortestPathDistance = graph.calculatePathDistance(shortestPath);
     std::ofstream shortestPathFile("shortest_path.txt");
     for (long long node : shortestPath) {
         shortestPathFile << node << " ";
     }
     shortestPathFile << std::endl;
 
+    // Print the shortest path and its distance
+    std::cout << "Shortest path distance: " << shortestPathDistance << " units" << std::endl;
+    std::cout << "Shortest Path: ";
+    for (long long node : shortestPath) {
+        std::cout << node << " ";
+    }
+    std::cout << std::endl;
+
     // Find the second shortest path
     std::vector<long long> secondShortestPath = graph.findSecondShortestPath(startNode, endNode);
+    double secondShortestPathDistance = graph.calculatePathDistance(secondShortestPath);
     std::ofstream secondShortestPathFile("second_shortest_path.txt");
     for (long long node : secondShortestPath) {
         secondShortestPathFile << node << " ";
     }
     secondShortestPathFile << std::endl;
+
+    // Print the second shortest path and its distance
+    std::cout << "Second shortest path distance: " << secondShortestPathDistance << " units" << std::endl;
+    std::cout << "Second Shortest Path: ";
+    for (long long node : secondShortestPath) {
+        std::cout << node << " ";
+    }
+    std::cout << std::endl;
 
     return 0;
 }

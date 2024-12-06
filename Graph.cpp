@@ -127,11 +127,12 @@ double Graph::calculatePathDistance(const std::vector<long long>& path) const {
         long long current = path[i];
         long long next = path[i + 1];
 
-        std::cout << "Checking edge from " << current << " to " << next << std::endl;
+        //std::cout << "Checking edge from " << current << " to " << next << std::endl;
 
         const auto& neighbors = getNeighbors(current);
         auto it = std::find_if(neighbors.begin(), neighbors.end(),
             [next](const Edge& edge) { return edge.target == next; });
+
 
         if (it == neighbors.end()) {
             throw std::runtime_error("Path is invalid: no edge between " +
@@ -182,7 +183,7 @@ std::vector<long long> Graph::findShortestPath(long long startNode, long long en
 
     // Handle invalid path
     if (previous.find(endNode) == previous.end()) {
-        std::cerr << "Error finding paths: No path found from " << startNode << " to " << endNode << std::endl;
+        //std::cerr << "Error finding paths: No path found from " << startNode << " to " << endNode << std::endl;
         return {};
     }
 
@@ -192,7 +193,7 @@ std::vector<long long> Graph::findShortestPath(long long startNode, long long en
     while (at != startNode) {
         path.push_back(at);
         if (previous.find(at) == previous.end()) {
-            std::cerr << "Error: No predecessor found for node " << at << ", path reconstruction failed." << std::endl;
+            //std::cerr << "Error: No predecessor found for node " << at << ", path reconstruction failed." << std::endl;
             return {};  // Return empty if no valid path
         }
         at = previous[at];
@@ -200,12 +201,7 @@ std::vector<long long> Graph::findShortestPath(long long startNode, long long en
     path.push_back(startNode);
     std::reverse(path.begin(), path.end());
 
-    // Debugging output for path
-    std::cout << "Path found: ";
-    for (long long node : path) {
-        std::cout << node << " ";
-    }
-    std::cout << std::endl;
+    
 
     return path;
 }
@@ -319,13 +315,7 @@ std::vector<long long> Graph::findSecondShortestPath(long long startNode, long l
         }
     }
 
-    // Debugging output
-    std::cout << "Second shortest path distance: " << secondShortestDistance << " units" << std::endl;
-    std::cout << "Second Shortest Path: ";
-    for (long long node : secondShortestPath) {
-        std::cout << node << " ";
-    }
-    std::cout << std::endl;
+    
 
     return secondShortestPath;
 }
