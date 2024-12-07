@@ -70,11 +70,9 @@ The graph is represented using an adjacency list, where each node (intersection)
 
 The main goal of this project is to load a road network from an OSM file, construct a graph, and find the shortest and second shortest paths between two nodes. The project demonstrates the use of graph algorithms and data structures to solve real-world problems.
 
-## Screenshots
+## Example run Video Link
 
-- **Graph Construction**: The graph is constructed from the OSM data, showing nodes and edges.
-- **Shortest Path**: The shortest path between two nodes is highlighted in green.
-- **Second Shortest Path**: The second shortest path between two nodes is highlighted in red.
+https://drive.google.com/file/d/1nOCDOY9D2e5pTDgGEPSr3e5pkv-gk1bk/view?usp=drive_link
 
 ## Conclusion
 
