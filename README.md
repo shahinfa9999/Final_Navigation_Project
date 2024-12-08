@@ -72,7 +72,7 @@ The main goal of this project is to load a road network from an OSM file, constr
 
 ## Example run Video Link
 
-https://drive.google.com/file/d/1nOCDOY9D2e5pTDgGEPSr3e5pkv-gk1bk/view?usp=drive_link
+https://drive.google.com/file/d/1nOCDOY9D2e5pTDgGEPSr3e5pkv-gk1bk/view?usp=sharing
 
 ## Conclusion
 
